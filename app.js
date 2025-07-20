@@ -12,7 +12,6 @@ function login() {
     document.getElementById("loginScreen").classList.add("hidden");
     document.getElementById("dashboard").classList.remove("hidden");
     loadPLReport();
-    renderChart();
   } else {
     alert("Usuario o contraseña incorrectos");
   }
@@ -48,39 +47,4 @@ function total(item) {
 
 function percent(val, total) {
   return (val / total) * 100;
-}
-
-function renderChart() {
-  const ctx = document.getElementById('revenueChart').getContext('2d');
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: dummyData.map(d => d.desc),
-      datasets: [
-        {
-          label: 'Actual',
-          data: dummyData.map(d => d.actual),
-          backgroundColor: 'rgba(0, 123, 255, 0.6)'
-        },
-        {
-          label: 'Budget',
-          data: dummyData.map(d => d.budget),
-          backgroundColor: 'rgba(0, 200, 83, 0.6)'
-        },
-        {
-          label: 'Last Year',
-          data: dummyData.map(d => d.lastYear),
-          backgroundColor: 'rgba(255, 193, 7, 0.6)'
-        }
-      ]
-    },
-    options: {
-      responsive: true,
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
 }

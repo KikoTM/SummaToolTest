@@ -6,7 +6,6 @@
   <title>Summatool Dashboard</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <div class="login-container" id="loginScreen">
@@ -24,7 +23,6 @@
           <li onclick="showSection('report')">Financial Reporting</li>
           <li onclick="showSection('chart')">Chart of Accounts</li>
           <li onclick="showSection('budget')">Budget & Forecast</li>
-          <li onclick="showSection('graph')">Visualización</li>
         </ul>
       </nav>
     </aside>
@@ -43,8 +41,7 @@
               <th>%</th>
             </tr>
           </thead>
-          <tbody>
-          </tbody>
+          <tbody></tbody>
         </table>
       </section>
 
@@ -56,11 +53,6 @@
       <section id="budget" class="section hidden">
         <h2>Budget & Forecast</h2>
         <p>En construcción...</p>
-      </section>
-
-      <section id="graph" class="section hidden">
-        <h2>Gráfico de Ingresos</h2>
-        <canvas id="revenueChart" width="400" height="200"></canvas>
       </section>
     </main>
   </div>

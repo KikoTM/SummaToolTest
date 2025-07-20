@@ -46,6 +46,15 @@ aside {
   padding: 2rem;
   display: flex;
   flex-direction: column;
+  transition: width 0.3s ease;
+}
+aside.collapsed {
+  width: 60px;
+  overflow: hidden;
+}
+aside.collapsed h2,
+aside.collapsed li {
+  display: none;
 }
 aside h2 {
   margin-bottom: 2rem;
@@ -64,6 +73,16 @@ aside nav ul li {
 }
 aside nav ul li:hover {
   background-color: #0077b6;
+}
+.toggle-btn {
+  background: #0077b6;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 5px;
 }
 main {
   flex-grow: 1;
