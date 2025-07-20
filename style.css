@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f7fb;
+  color: #333;
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: white;
+}
+.login-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.login-container input {
+  padding: 0.75rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  width: 250px;
+}
+.login-container button {
+  padding: 0.75rem;
+  width: 270px;
+  margin-top: 1rem;
+  border: none;
+  background-color: #03045e;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+aside {
+  width: 250px;
+  background-color: #023e8a;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+aside h2 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+aside nav ul {
+  list-style: none;
+  padding: 0;
+}
+aside nav ul li {
+  margin: 1rem 0;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+aside nav ul li:hover {
+  background-color: #0077b6;
+}
+main {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+.section {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+table th, table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+table th {
+  background-color: #caf0f8;
+  color: #03045e;
+}
+table tr:hover {
+  background-color: #f1f1f1;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summatool Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="login-container" id="loginScreen">
+    <h1>Summatool</h1>
+    <input type="text" id="username" placeholder="Usuario" />
+    <input type="password" id="password" placeholder="Contraseña" />
+    <button onclick="login()">Iniciar sesión</button>
+  </div>
+
+  <div class="dashboard hidden" id="dashboard">
+    <aside>
+      <h2>Summatool</h2>
+      <nav>
+        <ul>
+          <li onclick="showSection('report')">Financial Reporting</li>
+          <li onclick="showSection('chart')">Chart of Accounts</li>
+          <li onclick="showSection('budget')">Budget & Forecast</li>
+          <li onclick="showSection('graph')">Visualización</li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <section id="report" class="section">
+        <h2>Profit & Loss Report</h2>
+        <table id="plTable">
+          <thead>
+            <tr>
+              <th>Descripción</th>
+              <th>Actual</th>
+              <th>%</th>
+              <th>Budget</th>
+              <th>%</th>
+              <th>Last Year</th>
+              <th>%</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="chart" class="section hidden">
+        <h2>Chart of Accounts</h2>
+        <p>En construcción...</p>
+      </section>
+
+      <section id="budget" class="section hidden">
+        <h2>Budget & Forecast</h2>
+        <p>En construcción...</p>
+      </section>
+
+      <section id="graph" class="section hidden">
+        <h2>Gráfico de Ingresos</h2>
+        <canvas id="revenueChart" width="400" height="200"></canvas>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
